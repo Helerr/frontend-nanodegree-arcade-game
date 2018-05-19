@@ -46,6 +46,7 @@ var Player = function(x, y, speed) {
 Player.prototype.update = function() {
 
 };
+//draw player on the screen
 Player.prototype.render = function() {
   ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
 };
@@ -67,7 +68,7 @@ Player.prototype.handleInput = function(key) {
 
 var allEnemies = [];
 var player = new Player(200, 385, 50);
-var enemy = new Enemy(0, Math.random() * 180 + 50, Math.random() * 256);
+var enemy = new Enemy(0, Math.random() * 180 + 50, Math.random() * 200);
 
 allEnemies.push(enemy);
 
@@ -115,7 +116,7 @@ var increaseDifficulty = function(enemyNumbers) {
 
   // load a new set of enemies in the level
   for (var i = 0; i <= enemyNumbers - 1; i++) {
-    var enemy = new Enemy(0, Math.random() * 180 + 50, Math.random() * 256);
+    var enemy = new Enemy(0, Math.random() * 180 + 50, Math.random() * 200);
 
     allEnemies.push(enemy);
   }
