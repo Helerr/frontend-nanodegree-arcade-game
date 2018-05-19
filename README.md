@@ -3,7 +3,7 @@
 ## Table of Contents
 
 * [Description](#description)
-* [Goal of the game](#goalofthegame)
+* [Goal](#goal)
 * [Instructions](#instructions)
 * [Notes](#notes)
 
@@ -12,9 +12,9 @@
 This is a copy of the classic arcade game "Frogger". The goal is to cross the road to reach the river and avoid all the bugs in the process.
 
 
-## Goal of the game
+## Goal
 
-Move by pressing the arrow keys in the desired direction. Make sure to avoid all the bugs to reach the river and win the level.
+Avoid all the bugs to reach the river and win the level.
 
 ## Instructions
 
