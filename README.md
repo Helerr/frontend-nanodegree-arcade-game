@@ -22,7 +22,7 @@ Avoid all the bugs to reach the river and win the level.
 * Press an arrow key to move in the desired direction
 * Avoid the bugs
 * Walk to the other side of the road
-* Get in the river and press arrow up to win the round
+* Get in the river and press arrow up to win the round and proceed to the next level
 
 ## Notes
 
