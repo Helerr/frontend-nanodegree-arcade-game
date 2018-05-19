@@ -1,8 +1,3 @@
-//Variables
-var allEnemies = [];
-var player = new Player(202.5, 383, 50);
-var enemy = new Enemy(0, Math.random() * 184 + 50, Math.random() * 256);
-
 // Enemies our player must avoid
 var Enemy = function(x, y, speed) {
     // Variables applied to each of our instances go here,
@@ -63,6 +58,11 @@ Player.prototype.handleInput = function (key) {
 // Now instantiate your objects.
 // Place all enemy objects in an array called allEnemies
 // Place the player object in a variable called player
+
+var allEnemies = [];
+var player = new Player(202.5, 383, 50);
+var enemy = new Enemy(0, Math.random() * 184 + 50, Math.random() * 256);
+
 allEnemies.push(enemy);
 
 
