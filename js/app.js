@@ -20,7 +20,7 @@ Enemy.prototype.update = function(dt) {
     if(this.x >= 505){
       this.x = 0;
     }
-    checkCollisions(this);
+  //  checkCollisions(this);
 };
 
 // Draw the enemy on the screen, required method for game
@@ -35,7 +35,7 @@ var Player = function (x, y, speed){
   this.x = x;
   this.y = y;
   this.speed = speed;
-  this.sprit = "images/char-cat-girl.png";
+  this.sprite = 'images/char-boy.png';
 }
 Player.prototype.update = function(){
 
@@ -61,7 +61,7 @@ Player.prototype.handleInput = function (key) {
 
 var allEnemies = [];
 var player = new Player(202.5, 383, 50);
-var enemy = new Enemy(0, Math.random() * 184 + 50, Math.random() * 256);
+var enemy = new Enemy(0, Math.random() * 180 + 50, Math.random() * 256);
 
 allEnemies.push(enemy);
 
