@@ -76,7 +76,8 @@ allEnemies.push(enemy);
 //function to check player collitions
 var checkCollisions = function(aEnemy) {
   //check collision with enemy
-  //if collided, reset player position
+  //if collided, reset player position and subtract 1 from the score
+  //display updated score
   if (player.y + 130 >= aEnemy.y + 90 &&
     player.x + 25 <= aEnemy.x + 90 &&
     player.y + 75 <= aEnemy.y + 135 &&
@@ -98,6 +99,7 @@ var checkCollisions = function(aEnemy) {
     player.x = 0;
   }
   //check if player reached river and won the round
+  //increase the difficulty of the game and update the score and level
   if (player.y + 50 <= 0) {
     player.x = 200;
     player.y = 385;
@@ -114,7 +116,7 @@ var increaseDifficulty = function(enemyNumbers) {
   // remove the previous enemies
   allEnemies.length = 0;
 
-  // load a new set of enemies in the level
+  // load a new set of enemies based on the current level
   for (var i = 0; i <= enemyNumbers - 1; i++) {
     var enemy = new Enemy(0, Math.random() * 180 + 50, Math.random() * 200);
 
