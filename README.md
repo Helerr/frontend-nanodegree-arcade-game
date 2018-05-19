@@ -1,6 +1,29 @@
-frontend-nanodegree-arcade-game
-===============================
+# Memory Game Project
 
-Students should use this [rubric](https://review.udacity.com/#!/projects/2696458597/rubric) for self-checking their submission. Make sure the functions you write are **object-oriented** - either class functions (like Player and Enemy) or class prototype functions such as Enemy.prototype.checkCollisions, and that the keyword 'this' is used appropriately within your class and class prototype functions to refer to the object the function is called upon. Also be sure that the **readme.md** file is updated with your instructions on both how to 1. Run and 2. Play your arcade game.
+## Table of Contents
 
-For detailed instructions on how to get started, check out this [guide](https://docs.google.com/document/d/1v01aScPjSWCCWQLIpFqvg3-vXLH2e8_SZQKC8jNO0Dc/pub?embedded=true).
+* [Description](#description)
+* [Goal of the game](#goalofthegame)
+* [Instructions](#instructions)
+* [Notes](#notes)
+
+## Description
+
+This is a copy of the classic arcade game "Frogger". The goal is to cross the road to reach the river and avoid all the bugs in the process.
+
+
+## Goal of the game
+
+Move by pressing the arrow keys in the desired direction. Make sure to avoid all the bugs to reach the river and win the level.
+
+## Instructions
+
+* Open index.html to load the game and play.
+* Press an arrow key to move in the desired direction
+* Avoid the bugs
+* Walk to the other side of the road
+* Get in the river and press arrow up to win the round
+
+## Notes
+
+This is a project for Udacity Front End Developer Scholarship.
