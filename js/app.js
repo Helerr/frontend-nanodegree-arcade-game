@@ -20,7 +20,7 @@ Enemy.prototype.update = function(dt) {
     if(this.x >= 505){
       this.x = 0;
     }
-  //  checkCollisions(this);
+    checkCollisions(this);
 };
 
 // Draw the enemy on the screen, required method for game
@@ -60,11 +60,24 @@ Player.prototype.handleInput = function (key) {
 // Place the player object in a variable called player
 
 var allEnemies = [];
-var player = new Player(202.5, 383, 50);
+var player = new Player(200, 385, 50);
 var enemy = new Enemy(0, Math.random() * 180 + 50, Math.random() * 256);
 
 allEnemies.push(enemy);
 
+
+//function to check player collitions
+const checkCollisions = function (aEnemy) {
+  if (player.y + 130 >= aEnemy.y + 90
+    && player.x + 25 <= aEnemy.x + 90
+    && player.y + 75 <= aEnemy.y + 135
+    && player.x + 75 >= aEnemy.x + 10) {
+    console.log("collision");
+    player.x = 200;
+    player.y = 385;
+  }
+
+}
 
 
 // This listens for key presses and sends the keys to your
