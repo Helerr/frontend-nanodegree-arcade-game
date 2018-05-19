@@ -1,3 +1,9 @@
+//skin Change
+var scoreEl = document.getElementById('score');
+var levelEl = document.getElementById('level');
+var score = 0;
+var level = 1;
+
 // Enemies our player must avoid
 var Enemy = function(x, y, speed) {
   // Variables applied to each of our instances go here,
@@ -77,19 +83,41 @@ var checkCollisions = function(aEnemy) {
     console.log('collision');
     player.x = 200;
     player.y = 385;
+    if (score > 0) {
+      score -= 1;
+      scoreEl.innerHTML = "Score: " + score;
+    }
   }
   //check collision with canvas edges
-  if(player.y > 385){
+  if (player.y > 385) {
     player.y = 385;
-  } else if (player.x > 410){
+  } else if (player.x > 410) {
     player.x = 400;
-  } else if (player. x < 0) {
+  } else if (player.x < 0) {
     player.x = 0;
   }
   //check if player reached river and won the round
-  if(player.y + 50 <= 0) {
+  if (player.y + 50 <= 0) {
     player.x = 200;
     player.y = 385;
+    score += 5;
+    level += 1;
+    increaseDifficulty(level);
+    scoreEl.innerHTML = "Score: " + score;
+    levelEl.innerHTML = "Level: " + level;
+  }
+};
+
+//increase the number of enemies based on player score
+var increaseDifficulty = function(enemyNumbers) {
+  // remove the previous enemies
+  allEnemies.length = 0;
+
+  // load a new set of enemies in the level
+  for (var i = 0; i <= enemyNumbers - 1; i++) {
+    var enemy = new Enemy(0, Math.random() * 180 + 50, Math.random() * 256);
+
+    allEnemies.push(enemy);
   }
 };
 
